@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { createHashRouter, RouterProvider, Routes, Route } from 'react-router-dom' 
 import Layout from '/src/dashboard/layout.jsx'
 import '/src/index.css'
 
@@ -12,14 +12,19 @@ import PayService from '/src/dashboard/payService/page.jsx'
 import Withdraw from '/src/dashboard/withdraw/page.jsx'
 import Login from '/src/pages/login.jsx'
 
-// Puedes definir este componente si aún no lo tienes en tu proyecto
-function NotFound() {
-  return <div>Página no encontrada</div>;
-}
+const router = createHashRouter(
+  [
+    { path: '/', element: <Login /> },
+    { path: '/dashboard', element: <Layout><Home /></Layout> },
+    { path: '/dashboard/deposit', element: <Layout><Deposit /></Layout> },
+    { path: '/dashboard/withdraw', element: <Layout><Withdraw /></Layout> },
+    { path: '/dashboard/payService', element: <Layout><PayService /></Layout> },
+    { path: '/dashboard/history', element: <Layout><History /></Layout> },
+  ])
 
 const App = () => {
   return (
-    <Router>
+    <RouterProvider router={router}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard/*">
@@ -29,9 +34,9 @@ const App = () => {
             <Route path="payService" element={<Layout><PayService /></Layout>} />
             <Route path="history" element={<Layout><History /></Layout>} />
         </Route>
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Layout><Login /></Layout>} />
       </Routes>
-    </Router>
+    </RouterProvider>
   );
 }
 
