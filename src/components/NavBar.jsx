@@ -75,7 +75,7 @@ const NavBar = () => {
       if (willLogout) {
         localStorage.removeItem('loggedin');
         Cookies.remove('loggedin');
-        window.location.href = '/';
+        window.location.href = '/PokeBank/';
       }
     });
   };
