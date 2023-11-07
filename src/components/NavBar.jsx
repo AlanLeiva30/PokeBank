@@ -86,7 +86,7 @@ const NavBar = () => {
         <div className="flex items-center justify-between">
           <Image
             className="w-20 h-20"
-            src="/src/resources/images/pokebank-logo.png"
+            src="/src/resources/Logo.png"
             alt="Pokémon Bank Logo"
           />
           <ul className="flex space-x-4 text-xl">
