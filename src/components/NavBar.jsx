@@ -10,6 +10,7 @@ import deposit from "/src/resources/icons/noun-receive-money-5673855.svg";
 import withdraw from "/src/resources/icons/noun-send-money-5673861.svg";
 import payService from "/src/resources/icons/noun-bank-2307169.svg";
 import history from "/src/resources/icons/noun-bill-notification-3820887.svg";
+import logo  from "/src/resources/Logo.png";
 
 const NavBar = () => {
   const [links, setLinks] = useState([
@@ -86,7 +87,7 @@ const NavBar = () => {
         <div className="flex items-center justify-between">
           <Image
             className="w-20 h-20"
-            src="./src/resources/Logo.png"
+            src={logo}
             alt="Pokémon Bank Logo"
           />
           <ul className="flex space-x-4 text-xl">
