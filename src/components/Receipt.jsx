@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Image,
 } from "@react-pdf/renderer";
-
+import logo  from "/src/resources/Logo.png";
 const Receipt = ({ user, service }) => {
 const styles = StyleSheet.create({
   page: {
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
 return (
   <Document>
     <Page size="A4" style={styles.page}>
-      <Image source="/src/resources/Logo.png" style={styles.bankLogo} />
+      <Image source= {logo} style={styles.bankLogo} />
       <View style={styles.header}>
         <Text style={styles.bankName}>PokeBank</Text>
         <Text style={styles.title}>Comprobante de Pago</Text>
