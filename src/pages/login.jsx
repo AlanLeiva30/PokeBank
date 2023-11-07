@@ -83,7 +83,7 @@ function Login() {
               </button>
             </div>
           </form>
-          <h1 className="text-pokeblack">(pin: 123)</h1>
+          <h1 className="text-pokeblack">(pin: 1234)</h1>
         </section>
       </main>
     </>
