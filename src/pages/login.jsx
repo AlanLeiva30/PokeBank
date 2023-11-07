@@ -16,7 +16,7 @@ function Login() {
           JSON.stringify({
             nombre: 'Alan Neitor',
             cuenta: '123456789',
-            pin: '123',
+            pin: '1234',
             saldoInicial: 100.00,
             transacciones: [],
           })
@@ -83,7 +83,7 @@ function Login() {
               </button>
             </div>
           </form>
-          <h1 className="text-pokegray">(pin: 123)</h1>
+          <h1 className="text-pokeblack">(pin: 123)</h1>
         </section>
       </main>
     </>
