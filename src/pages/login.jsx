@@ -14,10 +14,10 @@ function Login() {
         localStorage.setItem(
           'user',
           JSON.stringify({
-            nombre: 'Alan Neitor',
-            cuenta: '123456789',
+            nombre: 'Ash Ketchum ',
+            cuenta: ' 0987654321 ',
             pin: '1234',
-            saldoInicial: 100.00,
+            saldoInicial: 500.00,
             transacciones: [],
           })
         );
